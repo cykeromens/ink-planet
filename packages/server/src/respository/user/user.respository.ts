@@ -34,6 +34,7 @@ export class UserRepository implements AfterRoutesInit {
     $log.debug('Loaded users: ', users);
     return users;
   }
+
   async delete(id: number): Promise<number> {
     const users = await this.entityManager.delete(User, id);
     $log.debug('Remove user by id: ', id);
